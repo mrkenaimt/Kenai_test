@@ -1,0 +1,8 @@
+services:
+  mbot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: telegram-bot
+    restart: unless-stopped
+    command: ["python", "-m", "mbot"]
